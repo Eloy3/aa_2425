@@ -23,9 +23,7 @@ y_prediction = perceptron.predict(X)
 
 
 # TODO: Entrenam una SVM linear (classe SVC)
-svm = SVC(C=100.0, kernel='linear')
-svm.fit(X_transformed, y, sample_weight=None)
-y_predictionSVM = svm.predict(X_transformed)
+
 
 # Mostrar resultats
 plt.figure(1)
@@ -39,10 +37,8 @@ plt.axline(xy1=origen, slope=m, c="blue", label="Adaline")
 
 # TODO Mostram els resultats SVM
 
-m2 = -svm.coef_[0][0] / svm.coef_[0][1]
-origen2 = (0, -svm.intercept_[0] / svm.coef_[0][1])
-plt.axline(xy1= origen2, slope= m2, c="green", label="SVM")
-plt.scatter(svm.support_vectors_[:, 0], svm.support_vectors_[:, 1], facecolors="none", edgecolors="green")
+# plt.axline(xy1= TODO, slope= TODO, c="green", label="SVM")
+# plt.scatter( TODO, facecolors="none", edgecolors="green")
 
 
 plt.legend()
